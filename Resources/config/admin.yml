@@ -1,0 +1,12 @@
+services:
+    awaresoft.faq.admin.faq:
+        class: Awaresoft\FaqBundle\Admin\FaqAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin.admin.menu_group_content, label: faq.admin.menu.faq }
+        arguments:
+            - null
+            - Application\FaqBundle\Entity\Faq
+            - AwaresoftFaqBundle:FaqCRUD
+            - "@service_container"
+        calls:
+            - [setTemplate, [tree, AwaresoftFaqBundle:CRUD:tree.html.twig]]
