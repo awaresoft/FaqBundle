@@ -6,7 +6,7 @@ use Application\FaqBundle\Entity\Faq;
 use Awaresoft\Doctrine\Common\DataFixtures\AbstractFixture as AwaresoftAbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Awaresoft\SettingBundle\Entity\Setting;
-use Awaresoft\SettingBundle\Entity\SettingHasFields;
+use Awaresoft\SettingBundle\Entity\SettingHasField;
 
 /**
  * Class LoadFaqData
@@ -67,7 +67,7 @@ class LoadFaqData extends AwaresoftAbstractFixture
             ->setInfo('Faq global parameters.');
         $manager->persist($setting);
 
-        $settingField = new SettingHasFields();
+        $settingField = new SettingHasField();
         $settingField->setSetting($setting);
         $settingField->setName('MAX_DEPTH');
         $settingField->setValue('1');
