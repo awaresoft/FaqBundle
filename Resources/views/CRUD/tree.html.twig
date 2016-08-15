@@ -23,6 +23,7 @@
                     {% endif %}
                     <span class="label label-default pull-right" title="{{ 'visits.count' |trans }}">{{ element.visits }}</span>
                     {% include 'AwaresoftTreeBundle:CRUD:tree_change_postion.html.twig' %}
+                    <div class="clearfix"></div>
                 </div>
                 {% if element.children|length %}
                     {{ _self.elements(element.children, admin, false) }}
