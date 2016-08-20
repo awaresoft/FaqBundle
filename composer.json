@@ -1,5 +1,5 @@
 {
-    "name": "awaresoft/FaqBundle",
+    "name": "awaresoft/faq-bundle",
     "type": "symfony-bundle",
     "description": "Symfony Awaresoft FaqBundle with Sonata libraries",
     "require": {
